@@ -202,9 +202,9 @@ foreach ($post_emagazine as $item) {
                 <a href="#" title="' . $item['title'] . '">
                     <img src="' . $url . '" alt="">
                     <span class="card__background">
-                        <img src="../img/magazine_normal_111.png" alt="">
+                        <img src="../libs/img/magazine_normal_111.png" alt="">
                         <span class="card__title">
-                            <img src="../img/magazine_normal_11.png" alt="">
+                            <img src="../libs/img/magazine_normal_11.png" alt="">
                         </span>
                     </span>
                 </a>
