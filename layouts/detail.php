@@ -229,6 +229,10 @@ for ($i=1; $i<3; $i++){
         </div>
     ';
 }
+
+$sql = "select * from post, news where  post.id = news.FK_post";
+$query = mysqli_query($conn, $sql);
+$news_detail = mysqli_fetch_array($query);
 ?>
 <!-- main -->
 <div class="main">
@@ -236,7 +240,7 @@ for ($i=1; $i<3; $i++){
     <div class="main-left">
         <!-- left title -->
         <div class="main-left__title">
-            Hội nghị tập huấn trực tuyến phòng, chống dịch COVID-19 tại các cơ sở khám chữa bệnh
+            <?php echo $news_detail['title'] ?>
         </div>
         <!-- left block 1-->
         <div class="main-left__block-1">
@@ -251,7 +255,7 @@ for ($i=1; $i<3; $i++){
         <!-- left block 2 -->
         <div class="main-left__block-2">
             <h2>
-                Tại Hà Nội, Bộ TT&TT đã tổ chức Hội nghị giao ban quản lý nhà nước tháng 9 năm 2018. Ủy viên Trung ương Đảng, Bí thư Ban Cán sự Đảng, Quyền Bộ trưởng Bộ TT&TT Nguyễn Mạnh Hùng đã chủ trì Hội nghị.
+                <?php echo $news_detail['brief'] ?>
             </h2>
             <div class="main-left__like">
                 <div class="like">
@@ -289,23 +293,8 @@ for ($i=1; $i<3; $i++){
         </ul>
         <!-- p -->
         <div class="main-left__block-p">
-            <p class="p1">
-                Hội nghị đã tập trung đánh giá những kết quả tích cực, những tồn tại của công tác quản lý nhà nước trong tháng 9/2018, đồng thời đề ra các giải pháp, mục tiêu cần thực hiện trong tháng 10/2018; chú trọng thúc đẩy phát triển các lĩnh vực trong ngành, gồm 6 lĩnh vực: Bưu chính, Viễn thông, CNTT, An toàn thông tin, Công nghiệp ICT, Báo chí- PTTH-Xuất bản.
-            </p>
-            <p class="p2">
-                Tại Hội nghị, Quyền Bộ trưởng đã phân tích: Bộ phải xây dựng khung pháp lý cho từng lĩnh vực do Chính phủ giao hoặc nằm trong kế hoạch của Bộ. Các cơ quan, đơn vị của Bộ cần thường xuyên nắm bắt xem các đối tượng quản lý và người dân gặp khó khăn gì và phải giải quyết những khó khăn, vướng mắc này ra sao.
-            </p>
-            <p class="p3">
-                Các văn bản pháp luật chính là công cụ để thúc đẩy các lĩnh vực quản lý nhà nước của Bộ phát triển lành mạnh, Quyền Bộ trưởng nhấn mạnh.
-            </p>
-            <img src="../libs/img/detail-p.png" alt="Hội nghị tập huấn trực tuyến phòng, chống dịch COVID-19 tại các cơ sở khám chữa bệnh">
-            <p class="p4">
-                Ảnh minh họa. (Nguồn ĐSVN)
-            </p>
-            <p class="p5">
-                Về mảng KHCN, tiêu chuẩn, công nghiệp CNTT, hiện Bộ Kế hoạch Đầu tư được Chính phủ giao xây dựng Chiến lược quốc gia 4.0. Quyền Bộ trưởng giao Vụ KHCN là đầu mối về 4.0 và khẳng định Bộ TT&TT cần xây dựng phiên bản riêng về chiến lược 4.0 cho đất nước. Vụ KHCN cần tham khảo kinh nghiệm quốc tế về 4.0 và tham khảo ý kiến của các Sở TT&TT.
-            </p>
-            <p class="p6">Hoàng Anh</p>
+            <?php echo $news_detail['content']?>
+            <p class="p6"><?php echo $news_detail['author']?></p>
         </div>
         <!-- end of p -->
         <div class="main-left__block-endp">
