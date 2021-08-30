@@ -23,6 +23,8 @@ require './include/sql.php';
             include_once('./layouts/category.php');
         }elseif($tam=='detail') {
             include('./layouts/detail.php');
+        }elseif($tam=='home'){
+            include_once('layouts/home.php');
         }else{
             include_once('layouts/home.php');
         }

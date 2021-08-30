@@ -48,7 +48,7 @@ foreach ($category as $cate) {
         <!-- header top -->
         <div class="header-top">
             <h1 class="header-top__logo">
-                <a title="DT&TT" href="./home.php">
+                <a title="DT&TT" href="?url=home">
                     <img src="../libs/img/logo_header.png" alt="logo_header">
                 </a>
             </h1>
@@ -67,10 +67,10 @@ foreach ($category as $cate) {
                 <!-- ul -->
                 <ul>
                     <li>
-                        <a href="#" title="TRANG CHỦ">
+                        <a href="?url=home" title="TRANG CHỦ">
                             <img class="header-nav__img1" src="../libs/img/logo_home.png" alt="logo_home">
                         </a>
-                        <a class="header-nav__home" href="#" title="TRANG CHỦ">TRANG CHỦ</a>
+                        <a class="header-nav__home" href="?url=home" title="TRANG CHỦ">TRANG CHỦ</a>
                     </li>
                     <?php
                         echo $nav_before;
